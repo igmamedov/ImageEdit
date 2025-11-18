@@ -224,3 +224,6 @@ data/
 logs/
 sample/
 dataset/
+logs/
+checkpoint-*/
+*comparison.ipynb
