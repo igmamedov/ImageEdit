@@ -21,7 +21,7 @@ def encode_images(images: list[Union[Image.Image, str]]) -> torch.Tensor:
     processed = []
     for img in images:
         if isinstance(img, str):  # если путь к файлу
-            img = Image.open(img).convert("RGB")
+            img = Image.open(img)#.convert("RGB")
         processed.append(preprocess(img))
 
     image_input = torch.stack(processed).to(device)
